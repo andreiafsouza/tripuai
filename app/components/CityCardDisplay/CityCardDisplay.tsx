@@ -5,9 +5,9 @@ export type CardProps = {
   title: string;
 };
 
-export const CityCard = ({ title }: CardProps) => {
+export const CityCardDisplay = ({ title }: CardProps) => {
   return (
-    <section className={styles.container} title={title}>
+    <section className={styles.container}>
       <div className={styles.content}>
         <h1>{title}</h1>
       </div>

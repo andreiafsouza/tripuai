@@ -1,27 +1,47 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import citiesData from "@/cities.json";
 import { CityCard } from "../components/CItyCard/CityCard";
-import SelectCityButton from "../components/SelectCityButton/SelectCityButton";
+import { CityCardDisplay } from "../components/CityCardDisplay/CityCardDisplay";
 /* style */
-import cartas from "./cartas.module.css";
+import styles from "./styles.module.css";
+import SelectCityButton from "../components/SelectCityButton/SelectCityButton";
 
-const CitiesCardListPage = async () => {
+export type CityProps = {
+  id: number;
+  nome: string;
+  top: number;
+  right: number;
+  left: number;
+  bottom: number;
+  bioma: string;
+};
+
+const CitiesCardListPage = () => {
   const cities = citiesData;
+  const [selectedCity, setSelectedCIty] = useState(cities[0].nome);
+
+  const handleChangeCityCard = (name: string) => {
+    const cardName: CityProps[] = cities.filter((city) => name === city.nome);
+    const selectedName = cardName[0].nome;
+    setSelectedCIty(selectedName);
+  };
 
   return (
-    <main className={cartas.container}>
-      <section>
-        <h1>CARTAS</h1>
-        <ul className={cartas.list}>
-          {cities.map((city) => (
-            <li key={city.id}>
-              <SelectCityButton title={city.nome} />
-            </li>
-          ))}
-        </ul>
+    <main className={styles.container}>
+      <section className={styles.cardDisplay}>
+        <CityCardDisplay title={selectedCity} />
       </section>
-      <section>
-        <CityCard />
+      <section className={styles.cardsList}>
+        {cities.map((city) => (
+          <SelectCityButton
+            key={city.id}
+            title={city.nome}
+            selectCity={handleChangeCityCard}
+          >
+            <CityCard title={city.nome} />
+          </SelectCityButton>
+        ))}
       </section>
     </main>
   );

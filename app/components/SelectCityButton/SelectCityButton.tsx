@@ -1,16 +1,21 @@
 "use client";
-import React from "react";
-import selectButton from "./select.module.css";
+import React, { ReactNode } from "react";
+import styles from "./styles.module.css";
 
 type SelectButtonProps = {
   title: string;
-  onClick?: () => void;
+  selectCity: (name: string) => void;
+  children: ReactNode;
 };
 
-const SelectCityButton = ({ title }: SelectButtonProps) => {
+const SelectCityButton = ({
+  title,
+  selectCity,
+  children,
+}: SelectButtonProps) => {
   return (
-    <button className={selectButton.button} onClick={() => console.log(title)}>
-      {title}
+    <button className={styles.button} onClick={() => selectCity(title)}>
+      {children}
     </button>
   );
 };
