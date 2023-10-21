@@ -3,19 +3,19 @@
   --clr-black: #000000;
   --clr-white: #ffffff;
 
-  --clr-green-olive: #B3BE6E;
-  --clr-green-tea: #77C091;
+  --clr-green-olive: #b3be6e;
+  --clr-green-tea: #77c091;
   --clr-green-wasabi: #778822;
   --clr-green-spring: #267342;
-  --clr-green-palm: #0C2716;
+  --clr-green-palm: #0c2716;
 
-  --clr-nude-rose: #DECABA;
-  --clr-nude-dust: #CAAD90;
-  --clr-nude-lion: #C29670;
-  --clr-nude-coffee: #674A32;
+  --clr-nude-rose: #decaba;
+  --clr-nude-dust: #caad90;
+  --clr-nude-lion: #c29670;
+  --clr-nude-coffee: #674a32;
 
-  --clr-orange-saffron: #FF9233;
-  --clr-red-carmine: #EB4747;
+  --clr-orange-saffron: #ff9233;
+  --clr-red-carmine: #eb4747;
 
   /* theme */
   --bg-primary: var(--clr-nude-dust);
@@ -25,49 +25,14 @@
 
   --card-front: var(--clr-nude-rose);
   --card-back: var(--clr-nude-dust);
-  
+
   --btn-primary: var(--clr-green-tea);
   --btn-secondary: var(--clr-green-olive);
   --btn-border-md: 6px;
   --btn-border-lg: 8px;
 
   --warning: var(--clr-orange-saffron);
-  --error: var(--clr-red-carmine)
-
-  /* sizes */
-  --max-width: 1440px;
-
-  /* fonts */
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  /* custom */
-
-  --primary-gradient: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --error: var(--clr-red-carmine);
 }
 
 *,
@@ -84,7 +49,17 @@
 
 body {
   background-color: var(--bg-primary);
-  color: var(--txt-primary)
+  color: var(--txt-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--clr-nude-rose);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--clr-green-spring);
 }
 
 ul[role="list"],

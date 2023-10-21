@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Baloo_2, Open_Sans } from "next/font/google";
 import "./globals.css";
 
-const noto = Noto_Sans({ subsets: ["latin"], weight: "500" });
+const open = Open_Sans({ subsets: ["latin"] });
+const baloo = Baloo_2({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata: Metadata = {
   title: "TripUai Jogo de Cartas",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={noto.className}>{children}</body>
+      <body className={open.className}>{children}</body>
     </html>
   );
 }
