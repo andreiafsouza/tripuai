@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import citiesData from "@/cities.json";
-import { CityCard } from "../components/CItyCard/CityCard";
-import { CityCardDisplay } from "../components/CityCardDisplay/CityCardDisplay";
+import citiesData from "../../cities.json";
+import { CityCard } from "@/components/CityCard/CityCard";
+import { CityCardDisplay } from "@/components/CityCardDisplay/CityCardDisplay";
 /* style */
 import styles from "./styles.module.css";
-import SelectCityButton from "../components/SelectCityButton/SelectCityButton";
+import SelectCityButton from "@/components/SelectCityButton/SelectCityButton";
 
 export type CityProps = {
   id: number;
