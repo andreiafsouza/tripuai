@@ -2,6 +2,8 @@
   /* colors */
   --clr-black: #000000;
   --clr-white: #ffffff;
+  --clr-white-07: rgba(255, 255, 255, 0.07);
+  --clr-white-20: rgba(255, 255, 255, 0.2);
 
   --clr-green-olive: #b3be6e;
   --clr-green-olive-80: rgba(179, 190, 110, 0.8);
@@ -11,6 +13,8 @@
   --clr-green-wasabi: #778822;
   --clr-green-spring: #267342;
   --clr-green-palm: #0c2716;
+  --clr-green-palm-20: rgba(12, 39, 22, 0.2);
+  --clr-green-palm-35: rgba(12, 39, 22, 0.35);
 
   --clr-nude-rose: #decaba;
   --clr-nude-dust: #caad90;

@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 558px;
+  height: 152px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(var(--clr-green-palm-35) -10px 10px 10px)
+    drop-shadow(var(--clr-green-palm-20) -30px 30px 30px)
+    drop-shadow(var(--clr-green-palm-20) -45px 45px 70px)
+    drop-shadow(var(--clr-white-07) 8px -8px 10px);
+  /*  drop-shadow(var(--clr-nude-dust) 20px 20px 0px); */
+}
+
+.logoBg {
+  position: absolute;
+  top: -56px;
+  left: -76px;
+
+  z-index: -1;
+}
