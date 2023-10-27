@@ -12,6 +12,7 @@
   --clr-green-tea-80: rgba(119, 192, 145, 0.8);
   --clr-green-wasabi: #778822;
   --clr-green-spring: #267342;
+  --clr-green-leaf: #366346;
   --clr-green-palm: #0c2716;
   --clr-green-palm-20: rgba(12, 39, 22, 0.2);
   --clr-green-palm-35: rgba(12, 39, 22, 0.35);
@@ -70,13 +71,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
   background-color: var(--clr-nude-rose);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--clr-green-spring);
+  background-color: var(--clr-green-leaf);
 }
 
 ul[role="list"],
