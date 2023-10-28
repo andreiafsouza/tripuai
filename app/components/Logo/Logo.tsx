@@ -4,23 +4,25 @@ import logoBg from "@/public/logo-bg.svg";
 import logo from "@/public/logo.svg";
 
 type LogoProps = {
-  width?: number;
-  height?: number;
+  size?: "small" | "default";
 };
 
-const Logo = ({ width, height }: LogoProps) => {
+const Logo = ({ size }: LogoProps) => {
   return (
     <div className={styles.wrapper}>
       <Image
-        className={!width && !height ? styles.logo : styles.logoSmall}
+        className={!size || size === "default" ? styles.logo : styles.logoSmall}
         src={logo}
         alt="Logo tripUAI"
-        width={width && width}
-        height={height && height}
+        width={size === "small" ? 208 : 573}
       />
-      {!width && !height ? (
-        <Image className={styles.logoBg} src={logoBg} alt="" />
-      ) : null}
+
+      <Image
+        className={!size || size === "default" ? styles.logoBg : styles.bgSmall}
+        src={logoBg}
+        alt=""
+        width={size === "small" ? 248 : 685}
+      />
     </div>
   );
 };

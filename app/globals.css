@@ -34,11 +34,6 @@
   --card-front: var(--clr-nude-rose);
   --card-back: var(--clr-nude-dust);
 
-  --btn-primary: var(--clr-green-tea);
-  --btn-secondary: var(--clr-green-olive);
-  --btn-border-md: 6px;
-  --btn-border-lg: 8px;
-
   --warning: var(--clr-orange-saffron);
   --error: var(--clr-red-carmine);
 }
