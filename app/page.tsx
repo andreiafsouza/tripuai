@@ -7,6 +7,7 @@ export default function Home() {
       <Logo />
       <h1>HELLO WORLD</h1>
       <Link href="/cartas">Cartas</Link>
+      <Link href="/play">Jogue agora</Link>
     </main>
   );
 }

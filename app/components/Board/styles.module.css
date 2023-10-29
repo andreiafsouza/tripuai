@@ -1,0 +1,12 @@
+.board {
+  display: grid;
+  max-width: fit-content;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.space {
+  width: 173px;
+  height: 216px;
+
+  border: 1px solid red;
+}
