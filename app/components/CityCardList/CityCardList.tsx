@@ -3,7 +3,7 @@ import React, { useState, ChangeEvent, useEffect } from "react";
 import { CityCard } from "@/components/CityCard/CityCard";
 import { CityCardDisplay } from "@/components/CityCardDisplay/CityCardDisplay";
 import SelectCityButton from "@/components/SelectCityButton/SelectCityButton";
-import { CityProps } from "app/cartas/page";
+import { CityProps } from "types/global";
 /* style */
 import styles from "./styles.module.css";
 

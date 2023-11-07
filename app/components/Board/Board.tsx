@@ -1,18 +1,25 @@
 "use client";
 import React, { useState, useEffect, KeyboardEvent, MouseEvent } from "react";
 import styles from "./styles.module.css";
+import { CityProps } from "types/global";
+
+export type BoardProps = {
+  player: string;
+  rival: string;
+  playerDeck: CityProps[];
+  rivalDeck: CityProps[];
+  playerPoints: number;
+  rivalPoints: number;
+};
 
 const Board = () => {
   const [selectedSpace, setSelectedSpace] = useState<number | null>(null);
 
   const handleKeyDown = (event: KeyboardEvent): void => {
     // Handle arrow key navigation to select spaces
-    if (
-      event.key === "ArrowUp" &&
-      selectedSpace !== null &&
-      selectedSpace > 2
-    ) {
-      setSelectedSpace(selectedSpace - 3);
+    console.log(event.key);
+    if (event.key === "ArrowUp") {
+      setSelectedSpace(0);
     } else if (
       event.key === "ArrowDown" &&
       selectedSpace !== null &&
@@ -31,6 +38,9 @@ const Board = () => {
       selectedSpace % 3 !== 2
     ) {
       setSelectedSpace(selectedSpace + 1);
+    } else if (event.key === "Enter" && selectedSpace !== null) {
+      // Add your logic here to handle the Enter key press on the selected space
+      console.log("Enter key pressed on space: " + selectedSpace);
     }
   };
 
@@ -59,15 +69,18 @@ const Board = () => {
   return (
     <div className={styles.board}>
       {Array.from({ length: 9 }).map((_, index) => (
-        <div
+        <button
           key={index}
-          className={`${styles.space} ${
-            index === selectedSpace ? styles.selected : ""
-          }`}
+          className={[
+            styles.space,
+            index === selectedSpace ? styles.selected : "",
+          ].join(" ")}
           onClick={() => handleSpaceClick(index)}
+          onBlur={() => setSelectedSpace(null)}
+          tabIndex={index}
         >
           {/* Your card component can be placed here */}
-        </div>
+        </button>
       ))}
     </div>
   );

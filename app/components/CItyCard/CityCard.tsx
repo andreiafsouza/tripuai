@@ -1,9 +1,5 @@
-import React from "react";
+import { CardProps } from "types/global";
 import styles from "./styles.module.css";
-
-export type CardProps = {
-  title: string;
-};
 
 export const CityCard = ({ title }: CardProps) => {
   return (
