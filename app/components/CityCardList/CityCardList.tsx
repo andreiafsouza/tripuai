@@ -110,7 +110,15 @@ const CityCardList = ({ cities }: { cities: CityProps[] }) => {
             title={city.nome}
             selectCity={handleChangeCityCard}
           >
-            <CityCard title={city.nome} />
+            <CityCard
+              nome={city.nome}
+              id={city.id}
+              top={city.top}
+              right={city.right}
+              left={city.left}
+              bottom={city.bottom}
+              bioma={city.bioma}
+            />
           </SelectCityButton>
         ))}
       </section>

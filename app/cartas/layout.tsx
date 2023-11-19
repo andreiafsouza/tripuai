@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header/Header";
+import { StoreProvider } from "app/store/StoreProvider";
 
 export const metadata: Metadata = {
   title: "TripUai Cartas",
@@ -13,9 +14,9 @@ export default function CardsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <StoreProvider>
       <Header />
       {children}
-    </section>
+    </StoreProvider>
   );
 }
